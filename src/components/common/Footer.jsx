@@ -41,15 +41,15 @@ const ContactLink = styled.a`
 const Footer = () => {
   return (
     <FooterContainer>
-      <p>&copy; 2024 Your Contractor Business. All rights reserved.</p>
+      <p>&copy; 2024 Tact Construction. All rights reserved.</p>
       <ContactSection>
         <ContactInfo>
           <ContactLabel>Email:</ContactLabel>
-          <ContactLink href="mailto:info@example.com">info@example.com</ContactLink>
+          <ContactLink href="mailto:info@example.com">TactBuilt@gmail.com</ContactLink>
         </ContactInfo>
         <ContactInfo>
           <ContactLabel>Phone:</ContactLabel>
-          <ContactLink href="tel:+123456789">+1 (234) 567-89</ContactLink>
+          <ContactLink href="tel:+123456789">(314) 649-3340</ContactLink>
         </ContactInfo>
       </ContactSection>
     </FooterContainer>

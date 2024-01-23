@@ -53,6 +53,11 @@ const CompanyInfo = styled.div`
     font-size: 1.2rem;
     width: 60vw;
     margin: 5% 20%;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin: 5% 0;
+    }
   }
 `;
 
