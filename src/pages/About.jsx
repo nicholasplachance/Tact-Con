@@ -66,19 +66,17 @@ const AboutPage = () => {
       </AboutContainer>
       
       <AboutContainer>
-          <Title>WHAT WE DO</Title>
-          <SubTitle>Vision</SubTitle>
+          <SubTitle>Performance </SubTitle>
           <Description>
-          Having a clear vision to an end goal is paramount to any process. From the beginning our designers and project managers will discuss your aspirations, preferences, and project goals as well as timelines, budget, approvals, and permits. While our project managers plan schedules and acquire approvals and permits, our team of skilled architects and designers will closely collaborate with you to translate those visions into comprehensive drawings to ensure you and our team members have a clear understanding of your final project. 
+          Our performance is built on a team of highly skilled craftsmen and clear communication throughout the entirety of your project, making sure every task is completed timely, cleanly, and precisely. Working as a cohesive team with a clear vision ensures no detail is left untouched.  
               {/* Add more sections as needed */}
           </Description>
       </AboutContainer>
 
       <AboutContainer>
-          <Title>WHAT WE DO</Title>
-          <SubTitle>Vision</SubTitle>
+          <SubTitle>Satisfaction</SubTitle>
           <Description>
-          Having a clear vision to an end goal is paramount to any process. From the beginning our designers and project managers will discuss your aspirations, preferences, and project goals as well as timelines, budget, approvals, and permits. While our project managers plan schedules and acquire approvals and permits, our team of skilled architects and designers will closely collaborate with you to translate those visions into comprehensive drawings to ensure you and our team members have a clear understanding of your final project. 
+          From our first point of contact to the final walk-through, your satisfaction is our fundamental priority. We understand you are either allowing us to build your new house or inviting us into your current home, and we do not take that lightly. We take pride in clean jobsites, transparent communication, personable team members, precision craftsmanship, and delivering a final product that exceeds your expectations. Our measure of success is your satisfaction and we at Tact Construction are not done until we have achieved just that.   
               {/* Add more sections as needed */}
           </Description>
       </AboutContainer>
