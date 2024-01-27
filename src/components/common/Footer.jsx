@@ -7,7 +7,7 @@ const FooterContainer = styled.footer`
   color: ${theme.colors.secondary};
   padding: 1rem;
   text-align: center;
-  border-top: 1px solid ${theme.colors.accent}; /* Subtle border color */
+  border-top: 8px solid ${theme.colors.accent}; /* Subtle border color */
 `;
 
 const ContactSection = styled.div`
@@ -38,10 +38,21 @@ const ContactLink = styled.a`
   }
 `;
 
+const Logo = styled.img`
+@media (min-width: 769px) {
+  height: 25vh;
+}
+
+  max-width: 100%;
+  height: 22vh;
+  margin-bottom: 1rem; /* Add margin for separation on mobile */
+`;
+
+
 const Footer = () => {
   return (
     <FooterContainer>
-      <p>&copy; 2024 Tact Construction. All rights reserved.</p>
+      <Logo src="/assets/Portfolio/Tact Construction.png" alt="Logo" />
       <ContactSection>
         <ContactInfo>
           <ContactLabel>Email:</ContactLabel>
@@ -52,6 +63,7 @@ const Footer = () => {
           <ContactLink href="tel:+123456789">(314) 649-3340</ContactLink>
         </ContactInfo>
       </ContactSection>
+      <p>&copy; 2024 Tact Construction. All rights reserved.</p>
     </FooterContainer>
   );
 };

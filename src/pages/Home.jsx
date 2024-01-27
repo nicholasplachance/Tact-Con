@@ -45,8 +45,9 @@ const CompanyInfo = styled.div`
   padding: 3rem;
 
   h2 {
-    font-size: 2rem;
+    font-size: 4rem;
     margin-bottom: 1.5rem;
+    font: oswald;
   }
 
   p {
@@ -61,6 +62,22 @@ const CompanyInfo = styled.div`
   }
 `;
 
+const CallToAction = styled.a`
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #fe3845 ; /* Your primary color */
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #fe3845 ; /* Your darker primary color on hover */
+  }
+`;
+
 
 
 const Home = () => {
@@ -72,6 +89,7 @@ const Home = () => {
         <p>
         Our team of professionals are dedicated to your satisfaction. Whether we are reimagining your existing space or crafting your new custom home, our passion for precision and commitment to service enable us to bring your vision to life. 
         </p>
+        <CallToAction href="/services">Explore Our Services</CallToAction>
       </CompanyInfo>
     </div>
   );

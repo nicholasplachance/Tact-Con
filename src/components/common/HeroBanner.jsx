@@ -11,6 +11,7 @@ const HeroBannerContainer = styled.div`
   color: white;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
   url('/assets/Portfolio/Bardsley Kitchen 2.jpg')  center/cover no-repeat fixed;
+  margin-top: 8px;
 `;
 
 const HeroContent = styled.div`
@@ -23,8 +24,13 @@ const HeroTitle = styled.h1`
 `;
 
 const HeroSubtitle = styled.p`
-  font-size: 1.5rem;
+  font-size: 3.5rem;
   margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+  }
+
 `;
 
 const HeroButton = styled.a`
@@ -33,13 +39,13 @@ const HeroButton = styled.a`
   font-size: 1.2rem;
   font-weight: bold;
   text-decoration: none;
-  background-color: #007BFF; /* Your primary color */
+  background-color: accent; /* Your primary color */
   color: white;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #0056b3; /* Your darker primary color on hover */
+    background-color: accent; /* Your darker primary color on hover */
   }
 `;
 
@@ -47,9 +53,7 @@ const HeroBannerComponent = () => {
   return (
     <HeroBannerContainer>
       <HeroContent>
-        <HeroTitle>Tact Construction</HeroTitle>
         <HeroSubtitle>Vision. Performance. Satisfaction.</HeroSubtitle>
-        <HeroButton href="/services">Explore Our Services</HeroButton>
       </HeroContent>
     </HeroBannerContainer>
   );

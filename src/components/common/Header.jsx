@@ -8,7 +8,7 @@ const HeaderContainer = styled.header`
   color: ${theme.colors.secondary};
   padding: 1rem;
   text-align: center;
-  border-bottom: 1px solid ${theme.colors.accent}; /* Subtle border color */
+  border-bottom: 8px solid ${theme.colors.accent}; /* Subtle border color */
 `;
 
 const HeaderContent = styled.div`
@@ -39,11 +39,11 @@ const LogoText = styled.div`
 
 const Logo = styled.img`
 @media (min-width: 769px) {
-  height: 8vh;
+  height: 25vh;
 }
 
   max-width: 100%;
-  height: auto;
+  height: 22vh;
   margin-bottom: 1rem; /* Add margin for separation on mobile */
 `;
 
@@ -69,7 +69,7 @@ const Header = () => {
           <h3>Tact Construction</h3>
         </LogoText>
         {/* Logo shown on both desktop and mobile */}
-        <Logo src="https://picsum.photos/id/1/200/100" alt="Logo" />
+        <Logo src="/assets/Portfolio/Tact Construction.png" alt="Logo" />
 
         {/* Navigation links shown on both desktop and mobile */}
         <Navigation>

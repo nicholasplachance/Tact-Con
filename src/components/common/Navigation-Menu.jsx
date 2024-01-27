@@ -35,8 +35,8 @@ const NavigationMenu = () => {
   return (
     <NavigationContainer>
       <NavLink href="/">Home</NavLink>
-      <NavLink href="/about">About</NavLink>
       <NavLink href="/services">Our Services</NavLink>
+      <NavLink href="/about">About</NavLink>
       <NavLink href="/contact">Contact</NavLink>
     </NavigationContainer>
   );
