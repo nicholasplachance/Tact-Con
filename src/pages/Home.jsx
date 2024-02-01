@@ -18,7 +18,7 @@ const HeroBanner = styled.div`
   align-items: center;
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
   }
 
@@ -31,7 +31,7 @@ const HeroBanner = styled.div`
     height: 40vh;
 
     h1 {
-      font-size: 2rem;
+      font-size: 3rem;
     }
 
     p {
@@ -44,11 +44,6 @@ const CompanyInfo = styled.div`
   text-align: center;
   padding: 3rem;
 
-  h2 {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
-    font: oswald;
-  }
 
   p {
     font-size: 1.2rem;
@@ -85,7 +80,7 @@ const Home = () => {
     <div>
       <HeroBannerComponent/>
       <CompanyInfo>
-        <h2>Tact Construction</h2>
+        <h1>Tact Construction</h1>
         <p>
         Our team of professionals are dedicated to your satisfaction. Whether we are reimagining your existing space or crafting your new custom home, our passion for precision and commitment to service enable us to bring your vision to life. 
         </p>

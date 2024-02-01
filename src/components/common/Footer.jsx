@@ -1,3 +1,5 @@
+import '@fortawesome/fontawesome-free/css/all.css';
+
 import React from 'react';
 import styled from 'styled-components';
 import theme from './theme';
@@ -8,17 +10,30 @@ const FooterContainer = styled.footer`
   padding: 1rem;
   text-align: center;
   border-top: 8px solid ${theme.colors.accent}; /* Subtle border color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 769px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `;
 
 const ContactSection = styled.div`
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+
+  @media (min-width: 769px) {
+    flex-direction: row;
+    margin-bottom: 1rem;
+  }
 `;
 
 const ContactInfo = styled.div`
-  margin: 0 1rem 1rem 1rem;
   text-align: center;
 `;
 
@@ -38,16 +53,41 @@ const ContactLink = styled.a`
   }
 `;
 
+const SocialLinks = styled.div`
+  display: flex;
+  margin-top: 1rem;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+`;
+
+const SocialLink = styled.a`
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  color: ${theme.colors.secondary};
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+
 const Logo = styled.img`
-@media (min-width: 769px) {
-  height: 25vh;
-}
+  @media (min-width: 769px) {
+    height: 12vh;
+  }
 
   max-width: 100%;
-  height: 22vh;
+  height: 12vh;
   margin-bottom: 1rem; /* Add margin for separation on mobile */
 `;
 
+const FooterText = styled.p`
+  margin-top: 1rem;
+  grid-column: span 2; // Span two columns
+  
+`;
 
 const Footer = () => {
   return (
@@ -62,8 +102,19 @@ const Footer = () => {
           <ContactLabel>Phone:</ContactLabel>
           <ContactLink href="tel:+123456789">(314) 649-3340</ContactLink>
         </ContactInfo>
+        <FooterText>&copy; 2024 Tact Construction. All rights reserved.</FooterText>
       </ContactSection>
-      <p>&copy; 2024 Tact Construction. All rights reserved.</p>
+      <SocialLinks>
+        <SocialLink href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-facebook-square"></i>
+        </SocialLink>
+        <SocialLink href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-instagram"></i>
+        </SocialLink>
+        <SocialLink href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-youtube"></i>
+        </SocialLink>
+      </SocialLinks>
     </FooterContainer>
   );
 };
