@@ -45,11 +45,10 @@ const AboutPage = () => {
   return (
     <>
       <ParallaxImageContainer>
-        <ParallaxImage src="assets/Portfolio/Family.JPG" alt="Company Building" />
+        <ParallaxImage src="public/assets/Portfolio\Family.png" alt="Company Building" /> 
       </ParallaxImageContainer>
       <AboutContainer>
         <Title>WHO WE ARE</Title>
-        <SubTitle>Family</SubTitle>
         <Description>
           Tact Construction is a family owned and operated remodel and new build company servicing the St. Louis and surrounding areas. Our paramount goal is your satisfaction. We believe in putting people first and building relationships between both our clients and team members. We take pride in not just constructing homes, but also in building trust through honesty and integrity. We are ready to turn your vision into a reality together.
           {/* Add more sections as needed */}
