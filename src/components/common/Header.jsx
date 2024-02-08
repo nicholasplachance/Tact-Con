@@ -75,15 +75,13 @@ const Header = () => {
         </Navigation>
         <SocialLinks>
           {/* Add your social icons here */}
-          <SocialLink href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-facebook-square"></i>
-          </SocialLink>
-          <SocialLink href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-instagram"></i>
-          </SocialLink>
-          <SocialLink href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-youtube"></i>
-          </SocialLink>
+          <SocialLink href="https://www.facebook.com/TactBuilt" target="_blank" rel="noopener noreferrer">
+  <i className="fab fa-facebook-square"></i>
+</SocialLink>
+
+<SocialLink href="https://www.instagram.com/tactconstruction" target="_blank" rel="noopener noreferrer">
+  <i className="fab fa-instagram"></i>
+</SocialLink>
         </SocialLinks>
       </HeaderContent>
     </HeaderContainer>

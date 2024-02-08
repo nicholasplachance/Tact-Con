@@ -3,17 +3,16 @@ import styled from 'styled-components';
 
 const ParallaxImageContainer = styled.div`
   position: relative;
-  height: 500px; /* Adjust the height as needed */
+  height: 650px; /* Adjust the height as needed */
   overflow: hidden;
 `;
 
 const ParallaxImage = styled.div`
   width: 100%;
-  height: 550px; /* Adjust the height as needed */
-  background-image: url('assets/Portfolio/Family.JPG');
+  height: 650px; /* Adjust the height as needed */
+  background-image: url('assets/Portfolio/Family.png');
   background-size: fit;
   background-position: center top;
-  background-attachment: fixed; /* Add parallax effect */
   background-repeat: no-repeat;
   margin-bottom: 1.5rem;
   margin-top: 2rem;
@@ -45,7 +44,7 @@ const AboutPage = () => {
   return (
     <>
       <ParallaxImageContainer>
-        <ParallaxImage src="public/assets/Portfolio\Family.png" alt="Company Building" /> 
+        <ParallaxImage src="/Family.png" alt="Company Building" />
       </ParallaxImageContainer>
       <AboutContainer>
         <Title>WHO WE ARE</Title>
