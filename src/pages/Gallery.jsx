@@ -34,6 +34,10 @@ const PhotographerCredit = styled.div`
     color: #333;
     text-decoration: underline;
   }
+
+  @media (max-width: 768px) {
+    bottom: 80px;
+  }
 `;
 
 const GalleryButton = styled.button`
