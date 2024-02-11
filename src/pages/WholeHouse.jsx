@@ -43,6 +43,26 @@ const Image = styled.img`
   width: 100%;
 `;
 
+const PhotographerCredit = styled.div`
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #333;
+
+  a {
+    color: #333;
+    text-decoration: underline;
+  }
+`;
+
+const photographerCreditText = 'Photographer: ';
+const photographerWebsite = 'https://www.heatherhannickdesigns.com/'; // Replace with actual photographer website
+
 const WholeHousePage = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -63,6 +83,12 @@ const WholeHousePage = () => {
             alt="Whole House Example"
             isExpanded={isExpanded}
           />
+          <PhotographerCredit>
+          {photographerCreditText}
+          <a href={photographerWebsite} target="_blank" rel="noopener noreferrer">
+            Heather Hannick
+          </a>
+        </PhotographerCredit>
         </ImageContainer>
       </ServiceCard>
     </ServicePageContainer>

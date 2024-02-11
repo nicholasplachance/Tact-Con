@@ -85,6 +85,7 @@ const NavigationMenu = () => {
       </StyledNavDropdown>
 
       <NavLink href="/contact">Contact</NavLink>
+      <NavLink href="/gallery">Gallery</NavLink>
     </NavigationContainer>
   );
 };

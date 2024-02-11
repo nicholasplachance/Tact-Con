@@ -7,6 +7,7 @@ import Contact from './pages/Contact';
 import CustomBuilds from './pages/CustomBuilds';
 import CustomFinishes from './pages/CustomFinishes';
 import Footer from './components/common/Footer';
+import GalleryComponent from './pages/Gallery';
 import Header from './components/common/Header';
 import Home from './pages/Home';
 import JotformPopup from './components/common/JotformPopup';
@@ -33,6 +34,7 @@ function App() {
         <Route path='/custom-finishes' element={<CustomFinishes/>} />
         <Route path='/kitchen-bathroom' element={<KitchenAndBath/>} />
         <Route path='/whole-house' element={<WholeHouse/>} />
+        <Route path='/gallery' element={<GalleryComponent/>}/>
 
         <Route path='/contact' element={<Contact />}/>
       </Routes>
