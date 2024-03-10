@@ -1,159 +1,114 @@
-// GalleryComponent.js
-
-import React, { useState } from 'react';
-
+import React from 'react';
 import styled from 'styled-components';
 import theme from '../components/common/theme';
 
+
 const GalleryContainer = styled.div`
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 16px;
   padding: 20px;
+  background-color: ${theme.colors.background};
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+`;
+
+const GalleryItem = styled.div`
   position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 const GalleryImage = styled.img`
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  max-height: 400px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-`;
-
-const PhotographerCredit = styled.div`
-  position: absolute;
-  bottom: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-  color: #333;
-
-  a {
-    color: #333;
-    text-decoration: underline;
-  }
-
-  @media (max-width: 768px) {
-    bottom: 80px;
-  }
-`;
-
-const GalleryButton = styled.button`
-  margin: 8px;
-  background-color: ${theme.colors.accent};
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  font-size: 16px;
-  border-radius: 4px;
+  flex: 1;
   cursor: pointer;
 `;
 
+const ImageOverlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  transition: opacity 0.3s ease-in-out;
+
+  ${GalleryItem}:hover & {
+    opacity: 1;
+  }
+`;
+
+const ImageText = styled.p`
+  margin: 0;
+  font-size: 16px;
+`;
+
 const imagePaths = [
-    "Bardsley Kitchen 1.jpg",
-    "Bardsley Kitchen 10.jpg",
-    "Bardsley Kitchen 11.jpg",
-    "Bardsley Kitchen 12.jpg",
-    "Bardsley Kitchen 13.jpg",
-    "Bardsley Kitchen 2.jpg",
-    "Bardsley Kitchen 3.jpg",
-    "Bardsley Kitchen 4.jpg",
-    "Bardsley Kitchen 5.jpg",
-    "Bardsley Kitchen 6.jpg",
-    "Bardsley Kitchen 7.jpg",
-    "Bardsley Kitchen 8.jpg",
-    "Bardsley Kitchen 9.jpg",
-    "Day Master Bath 1.jpg",
-    "Day Master Bath 2.jpg",
-    "Day Master Bath 3.jpg",
-    "Day Master Bath 4.jpg",
-    "Day Master Bath 5.jpg",
-    "Day Master Bath 6.jpg",
-    "Day Master Bath 7.jpg",
-    "Family.png",
-    "Glendale Master Bath 1.jpg",
-    "Glendale Master Bath 2.jpg",
-    "Glendale Master Bath 3.jpg",
-    "Glendale Master Bath 4.jpg",
-    "Glendale Poweder 1.jpg",
-    "Glendale Poweder 2.jpg",
-    "Hoard House 1.jpg",
-    "Hoard House 2.jpg",
-    "Hoard House 3.jpg",
-    "Hoard House 4.jpg",
-    "Lafayette Master Bath 1.jpg",
-    "Lafayette Master Bath 2.jpg",
-    "Lafayette Master Bath 3.jpg",
-    "Lafayette Master Bath 4.jpg",
-    "Lafayette Master Bath 5.jpg",
-    "Lafayette Master Bath 6.jpg",
-    "Lynnich Accent Wall.jpg",
-    "Nichols Master Bath 1.jpg",
-    "Nichols Master Bath 2.jpg",
-    "Nichols Master Bath 3.jpg",
-    "Nichols Master Bath 4.jpg",
-    "Piles Kitchen 1.jpg",
-    "Piles Kitchen 2.jpg",
-    "Piles Kitchen 3.jpg",
-    "Powers Bathroom 1.jpg",
-    "Powers Bathroom 2.jpg",
-    "Powers Bathroom 3.jpg",
-    "Powers Bathroom 4.jpg",
-    "Powers Bathroom 5.jpg",
-    "Powers Bathroom 6.jpg",
-    "Russell Kitchen 1.jpg",
-    "Russell Kitchen 2.jpg",
-    "Russell Kitchen 3.jpg",
-    "Schaefer Bathroom 1.jpg",
-    "Schaefer Bathroom 2.jpg",
-    "Schaefer Bathroom 3.jpg",
-    "Smith Master.jpg",
-    "Smith Shower 1.jpg",
-    "Smith Shower 2.jpg",
-    "Taca Accent Wall 1.jpg",
-    "Taca Accent Wall 2.jpg",
-    "Taca Accent Wall 3.jpg",
-    "Taca Accent Wall 4.jpg",
-    "Tact Construction.png",
-    "Walker Kitchen 1.jpg",
-    "Walker Kitchen 2.jpg",
-    "Walker Kitchen 3.jpg",
-    "Walker Kitchen 4.jpg"
-  ].map((imageName) => `assets/Portfolio/${imageName}`);
+  "Bardsley Kitchen 10.jpg",
+  "Bardsley Kitchen 14.jpg",
+  "Day Master Bath 1.jpg",
+  "Day Master Bath.jpg",
+  "Glendale Master Bath 1.jpg",
+  "Glendale Master Bath 2.jpg",
+  "Hoard House 3.jpg",
+  "Hoard House 4.jpg",
+  "Piles Kitchen 3.jpg",
+  "Powers Bathroom 2.jpg",
+  "Powers Bathroom 4.jpg",
+  "Russell Kitchen 3.jpg",
+  "Schaefer Bathroom 1.jpg",
+  "Schaefer Bathroom 2.jpg",
+  "Smith Master.jpg",
+  "Taca Accent Wall 3.jpg",
+  "Walker Kitchen 1.jpg",
+].map((imageName) => `assets/iloveimg-resized/${imageName}`);
 
+const photographerCreditText = 'Interior Designer: ';
+const photographerWebsite = 'https://www.heatherhannickdesigns.com/';
 
-
-  const photographerCreditText = 'Photographer: ';
-  const photographerWebsite = 'https://www.heatherhannickdesigns.com/'; // Replace with actual photographer website
-  
-  const GalleryComponent = () => {
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
-    const nextImage = () => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imagePaths.length);
-    };
-  
-    const prevImage = () => {
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === 0 ? imagePaths.length - 1 : prevIndex - 1
-      );
-    };
-  
-    return (
-      <GalleryContainer>
-        <GalleryImage src={imagePaths[currentImageIndex]} alt={`Image ${currentImageIndex + 1}`} />
-        <PhotographerCredit>
-          {photographerCreditText}
-          <a href={photographerWebsite} target="_blank" rel="noopener noreferrer">
-            Photographer Name
-          </a>
-        </PhotographerCredit>
-        <GalleryButton onClick={prevImage}>Previous</GalleryButton>
-        <GalleryButton onClick={nextImage}>Next</GalleryButton>
-      </GalleryContainer>
-    );
+const GalleryComponent = ({ images = imagePaths }) => {
+  const handleImageClick = (index) => {
+    // Implement logic to show the full image on mobile
+    console.log(`Clicked on image ${index + 1}`);
   };
-  
-  export default GalleryComponent;
+
+  return (
+    <GalleryContainer>
+      {images.map((image, index) => (
+        <GalleryItem key={index}>
+          <GalleryImage
+            src={image}
+            alt={`Image ${index + 1}`}
+            onClick={() => handleImageClick(index)}
+          />
+          <ImageOverlay>
+            <ImageText>{photographerCreditText}
+          <a href={photographerWebsite} target="_blank" rel="noopener noreferrer">
+            Heather Hannick
+          </a></ImageText>
+          </ImageOverlay>
+        </GalleryItem>
+      ))}
+    </GalleryContainer>
+  );
+};
+
+export default GalleryComponent;

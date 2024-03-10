@@ -7,14 +7,13 @@ const WhatWeDoContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: ${theme.colors.background};
+  color: ${theme.colors.primary};
 `;
 
 const CardContainer = styled.div`
   width: 100%;
   max-width: 600px; /* Adjust the max-width as needed */
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px ${theme.colors.accent};
   margin-bottom: 2rem;
   padding: 1.5rem;
   text-align: justify;
@@ -30,6 +29,7 @@ const SubTitle = styled.h2`
   font-size: 1.6rem;
   margin-bottom: 1rem;
   text-align: center;
+  text-decoration: underline;
 `;
 
 const Description = styled.p`
@@ -42,7 +42,6 @@ const WhatWeDoPage = () => {
   return (
     <WhatWeDoContainer>
       <CardContainer>
-        <Title>WHAT WE DO</Title>
 
         <SubTitle>Vision</SubTitle>
         <Description>

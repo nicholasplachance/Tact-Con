@@ -23,11 +23,11 @@ const HeaderContent = styled.div`
 
 const Logo = styled.img`
   @media (min-width: 769px) {
-    height: 25vh;
+    height: 16vh;
   }
 
   max-width: 100%;
-  height: 22vh;
+  height: 14vh;
   margin-bottom: 1rem; /* Add margin for separation on mobile */
 `;
 

@@ -20,6 +20,7 @@ const HeroBanner = styled.div`
   h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
+    display: none;
   }
 
   p {
@@ -43,7 +44,11 @@ const HeroBanner = styled.div`
 const CompanyInfo = styled.div`
   text-align: center;
   padding: 3rem;
-
+  background-color: ${theme.colors.background};
+  color: ${theme.colors.primary};
+  h1 {
+    display: none;
+  }
 
   p {
     font-size: 1.2rem;

@@ -5,6 +5,8 @@ import theme from '../components/common/theme';
 const WhoWeAreContainer = styled.div`
   padding: 2rem;
   text-align: center;
+  background-color: ${theme.colors.background};
+  color: ${theme.colors.primary};
 `;
 
 const Title = styled.h2`
@@ -38,9 +40,7 @@ const ParallaxImage = styled.div`
 const CardContainer = styled.div`
   width: 100%;
   max-width: 600px; /* Adjust the max-width as needed */
-  background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px ${theme.colors.accent};
   margin-bottom: 2rem;
   padding: 1.5rem;
   text-align: justify;
@@ -54,7 +54,6 @@ const WhoWeArePage = () => {
         <ParallaxImage src="/Family.png" alt="Company Building" />
       </ParallaxImageContainer>
       <CardContainer>
-        <Title>WHO WE ARE</Title>
         <Description>
           Tact Construction is a family-owned and operated remodel and new build company servicing the St. Louis and surrounding areas. Our paramount goal is your satisfaction. We believe in putting people first and building relationships between both our clients and team members. We take pride in not just constructing homes but also in building trust through honesty and integrity. We are ready to turn your vision into a reality together.
           {/* Add more sections as needed */}

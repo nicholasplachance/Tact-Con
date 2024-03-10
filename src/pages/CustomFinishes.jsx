@@ -9,10 +9,9 @@ const ServicePageContainer = styled.div`
   text-align: center;
 `;
 
+
 const ServiceCard = styled.div`
-  background-color: white;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   text-align: left;
   width: 80%;
@@ -20,12 +19,13 @@ const ServiceCard = styled.div`
 `;
 
 const ServiceTitle = styled.h2`
-  color: ${theme.colors.secondary};
+  color: ${theme.colors.primary};
 `;
 
 const ServiceDescription = styled.p`
-  color: ${theme.colors.secondary};
+  color: ${theme.colors.primary};
 `;
+
 
 const ImageContainer = styled.div`
   position: relative;
@@ -57,7 +57,7 @@ const PhotographerCredit = styled.div`
   }
 `;
 
-const photographerCreditText = 'Photographer: ';
+const photographerCreditText = 'Interior Designer: ';
 const photographerWebsite = 'https://www.heatherhannickdesigns.com/'; // Replace with actual photographer website
 
 
