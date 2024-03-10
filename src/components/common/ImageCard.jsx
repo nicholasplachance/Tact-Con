@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import theme from './theme';
 
 const ImageContainer = styled.div`
+  width: 450px;
   position: relative;
   overflow: hidden;
   border-radius: 8px;
@@ -11,6 +12,10 @@ const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 250px;
+  }
 
   &:hover {
     transform: scale(1.05);
@@ -30,20 +35,20 @@ const Image = styled.img`
 
 const PhotographerCredit = styled.div`
   position: absolute;
-  bottom: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-  color: #333;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
   transition: opacity 0.3s ease-in-out;
 
-  a {
-    color: #333;
-    text-decoration: underline;
+  ${Image}:hover & {
+    opacity: 1;
   }
 `;
 

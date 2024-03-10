@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import styled from 'styled-components';
 import theme from '../components/common/theme';
+import ImageCard from '../components/common/ImageCard';
 
 const ServicePageContainer = styled.div`
   background-color: ${theme.colors.background};
@@ -73,19 +74,8 @@ const CustomBuildsPage = () => {
         <ServiceDescription>
           From your vision to a turnkey home, Tact Construction and our expert team of contractors are equipped to handle every aspect of your project from blueprints and planning to the final coat of paint and landscaping. Our team of specialized designers and craftsmen are ready to bring your new home vision to life.
         </ServiceDescription>
-        <ImageContainer onClick={toggleExpand}>
-          <Image
-            src="assets/Portfolio/Hoard House 4.jpg"
-            alt="Custom Builds Example"
-            isExpanded={isExpanded}
-          />
-          <PhotographerCredit>
-          {photographerCreditText}
-          <a href={photographerWebsite} target="_blank" rel="noopener noreferrer">
-            Heather Hannick
-          </a>
-        </PhotographerCredit>
-        </ImageContainer>
+        <ImageCard src="assets/Portfolio/Hoard House 4.jpg" alt="Custom Builds Example" isExpanded={isExpanded} />
+        
       </ServiceCard>
     </ServicePageContainer>
   );

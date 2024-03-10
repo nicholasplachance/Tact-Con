@@ -11,10 +11,8 @@ const ServicePageContainer = styled.div`
 
 const ServiceCard = styled.div`
   border-radius: 8px;
-  padding: 2rem;
   text-align: left;
   width: 80%;
-  margin: 3% 10%;
 `;
 
 const ServiceTitle = styled.h2`

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import styled from 'styled-components';
 import theme from '../components/common/theme';
+import ImageCard from '../components/common/ImageCard';
 
 const ServicePageContainer = styled.div`
   background-color: ${theme.colors.background};
@@ -72,19 +73,8 @@ const WholeHousePage = () => {
         <ServiceDescription>
           Re-envisioning your whole house allows you to unlock the full potential of your home, giving you the power to redefine the way you live. A comprehensive transformation can provide changes to your home's layout tailored to fit your needs and lifestyle, while providing you with the opportunity to customize every inch of your home. Our creative designers and skilled architects are experts at providing cohesive and harmonious designs that reflect your personality and enhance your daily life.
         </ServiceDescription>
-        <ImageContainer onClick={toggleExpand}>
-          <Image
-            src="assets/Portfolio/Walker Kitchen 1.jpg"
-            alt="Whole House Example"
-            isExpanded={isExpanded}
-          />
-          <PhotographerCredit>
-          {photographerCreditText}
-          <a href={photographerWebsite} target="_blank" rel="noopener noreferrer">
-            Heather Hannick
-          </a>
-        </PhotographerCredit>
-        </ImageContainer>
+        <ImageCard src="assets/Portfolio/Walker Kitchen 1.jpg" alt="Custom Builds Example" isExpanded={isExpanded} />
+        
       </ServiceCard>
     </ServicePageContainer>
   );

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import styled from 'styled-components';
 import theme from '../components/common/theme';
+import ImageCard from '../components/common/ImageCard';
 
 const ServicePageContainer = styled.div`
   background-color: ${theme.colors.background};
@@ -75,19 +76,7 @@ const CustomFinishesPage = () => {
         <ServiceDescription>
           Elevate your home with luxurious custom finishes that fit your style and needs. Whether it’s turning your dreary laundry room into a chic and functional space or crafting a stylish home bar for entertaining guests, our team of designers is ready to bring every corner of your home to life. From stunning accent walls to transforming your untouched basement into a cozy living space, Tact Construction is ready to turn your vision into reality.
         </ServiceDescription>
-        <ImageContainer onClick={toggleExpand}>
-          <Image
-            src="assets/Portfolio/Taca Accent Wall 4.jpg"
-            alt="Custom Finishes Example"
-            isExpanded={isExpanded}
-          />
-          <PhotographerCredit>
-          {photographerCreditText}
-          <a href={photographerWebsite} target="_blank" rel="noopener noreferrer">
-            Heather Hannick
-          </a>
-        </PhotographerCredit>
-        </ImageContainer>
+        <ImageCard src="assets/Portfolio/Taca Accent Wall 4.jpg" alt="Custom Builds Example" isExpanded={isExpanded} />
       </ServiceCard>
     </ServicePageContainer>
   );

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import styled from 'styled-components';
 import theme from '../components/common/theme';
+import ImageCard from '../components/common/ImageCard';
 
 const ServicePageContainer = styled.div`
   background-color: ${theme.colors.background};
@@ -71,19 +72,7 @@ const KitchenAndBathPage = () => {
         <ServiceDescription>
           Tact Construction is committed to your vision. Our team of designers works with you to design spaces that blend stunning aesthetics to fit your style, with functionality that suits your needs. Our skilled craftsmen take pride in precision and attention to detail all while maintaining a clean and safe workspace. We are prepared to turn your vision of a serene bathroom or elegant kitchen into life.
         </ServiceDescription>
-        <ImageContainer onClick={toggleExpand}>
-          <Image
-            src="assets/Portfolio/Lafayette Master Bath 5.jpg"
-            alt="Kitchen and Bathroom Example"
-            isExpanded={isExpanded}
-          />
-          <PhotographerCredit>
-          {photographerCreditText}
-          <a href={photographerWebsite} target="_blank" rel="noopener noreferrer">
-            Heather Hannick
-          </a>
-        </PhotographerCredit>
-        </ImageContainer>
+        <ImageCard src="assets/Portfolio/Lafayette Master Bath 5.jpg" alt="Custom Builds Example" isExpanded={isExpanded} />
       </ServiceCard>
     </ServicePageContainer>
   );
