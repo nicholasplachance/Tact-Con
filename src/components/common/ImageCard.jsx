@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import theme from './theme';
 
 const ImageContainer = styled.div`
-  width: 450px;
+  width: 60vw;
   position: relative;
   overflow: hidden;
   border-radius: 8px;
@@ -14,7 +14,7 @@ const ImageContainer = styled.div`
   cursor: pointer;
 
   @media (max-width: 768px) {
-    width: 250px;
+    width: 80vw;
   }
 
   &:hover {
@@ -56,7 +56,7 @@ const ImageCard = ({ src, alt, isExpanded }) => (
   <ImageContainer>
     <Image src={src} alt={alt} isExpanded={isExpanded} />
     <PhotographerCredit className="photographer-credit-overlay">
-      Interior Designer:{' '}
+      Designer:{' '}
       <a href="https://www.heatherhannickdesigns.com/" target="_blank" rel="noopener noreferrer">
         Heather Hannick
       </a>
