@@ -94,13 +94,13 @@ const Footer = () => {
     <FooterContainer>
       <Logo src="/assets/Portfolio/Tact Construction.png" alt="Logo" />
       <ContactSection>
-        <ContactInfo>
+      <ContactInfo>
           <ContactLabel>Email:</ContactLabel>
-          <ContactLink href="mailto:info@example.com">TactBuilt@gmail.com</ContactLink>
+          <ContactLink href="mailto:TactBuilt@gmail.com">TactBuilt@gmail.com</ContactLink>
         </ContactInfo>
         <ContactInfo>
           <ContactLabel>Phone:</ContactLabel>
-          <ContactLink href="tel:+123456789">(314) 649-3340</ContactLink>
+          <ContactLink href="tel:3146493340">(314) 649-3340</ContactLink>
         </ContactInfo>
         <FooterText>&copy; 2024 Tact Construction. All rights reserved.</FooterText>
       </ContactSection>
