@@ -14,7 +14,7 @@ const ImageContainer = styled.div`
   cursor: pointer;
 
   @media (max-width: 768px) {
-    width: 80vw;
+    max-width: 80vw;
   }
 
   &:hover {
