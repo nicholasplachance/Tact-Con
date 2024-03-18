@@ -57,7 +57,7 @@ const PhotographerCredit = styled.div`
   }
 `;
 
-const photographerCreditText = 'Interior Designer: ';
+const photographerCreditText = 'Designer: ';
 const photographerWebsite = 'https://www.heatherhannickdesigns.com/'; // Replace with actual photographer website
 
 const CustomBuildsPage = () => {
@@ -74,7 +74,10 @@ const CustomBuildsPage = () => {
         <ServiceDescription>
           From your vision to a turnkey home, Tact Construction and our expert team of contractors are equipped to handle every aspect of your project from blueprints and planning to the final coat of paint and landscaping. Our team of specialized designers and craftsmen are ready to bring your new home vision to life.
         </ServiceDescription>
-        <ImageCard src="assets/Portfolio/Hoard House 4.jpg" alt="Custom Builds Example" isExpanded={isExpanded} />
+        <ImageCard
+  src="assets/Portfolio/Hoard House 4.jpg" alt="Custom Builds Example"
+  designer={{ name: "House of Hoard", website: "" }}
+/>
         
       </ServiceCard>
     </ServicePageContainer>

@@ -56,7 +56,7 @@ const PhotographerCredit = styled.div`
   }
 `;
 
-const photographerCreditText = 'Interior Designer: ';
+const photographerCreditText = 'Designer: ';
 const photographerWebsite = 'https://www.heatherhannickdesigns.com/'; // Replace with actual photographer website
 
 const WholeHousePage = () => {
@@ -73,8 +73,10 @@ const WholeHousePage = () => {
         <ServiceDescription>
           Re-envisioning your whole house allows you to unlock the full potential of your home, giving you the power to redefine the way you live. A comprehensive transformation can provide changes to your home's layout tailored to fit your needs and lifestyle, while providing you with the opportunity to customize every inch of your home. Our creative designers and skilled architects are experts at providing cohesive and harmonious designs that reflect your personality and enhance your daily life.
         </ServiceDescription>
-        <ImageCard src="assets/Portfolio/Walker Kitchen 1.jpg" alt="Custom Builds Example" isExpanded={isExpanded} />
-        
+        <ImageCard
+  src="assets/Portfolio/Walker Kitchen 1.jpg" alt="Custom Builds Example"
+  designer={{ name: "Heather Hannick", website: "https://www.heatherhannickdesigns.com/" }}
+/>
       </ServiceCard>
     </ServicePageContainer>
   );

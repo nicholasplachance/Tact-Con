@@ -58,7 +58,7 @@ const PhotographerCredit = styled.div`
   }
 `;
 
-const photographerCreditText = 'Interior Designer: ';
+const photographerCreditText = 'Designer: ';
 const photographerWebsite = 'https://www.heatherhannickdesigns.com/'; // Replace with actual photographer website
 
 
@@ -74,9 +74,12 @@ const CustomFinishesPage = () => {
       <ServiceCard>
         <ServiceTitle>Custom Finishes</ServiceTitle>
         <ServiceDescription>
-          Elevate your home with luxurious custom finishes that fit your style and needs. Whether it’s turning your dreary laundry room into a chic and functional space or crafting a stylish home bar for entertaining guests, our team of designers is ready to bring every corner of your home to life. From stunning accent walls to transforming your untouched basement into a cozy living space, Tact Construction is ready to turn your vision into reality.
+          Elevate your home with luxurious custom finishes that fit your style and needs. Whether it’s turning your dreary laundry room into a chic and functional space or crafting a stylish home bar for entertaining guests, our team of designers are ready to bring every corner of your home to life. From stunning accent walls to transforming your untouched basement into a cozy living space, Tact Construction is ready to turn your vision into reality.
         </ServiceDescription>
-        <ImageCard src="assets/Portfolio/Taca Accent Wall 4.jpg" alt="Custom Builds Example" isExpanded={isExpanded} />
+        <ImageCard
+  src="assets/Portfolio/Taca Accent Wall 4.jpg" alt="Custom Builds Example"
+  designer={{ name: "Heather Hannick", website: "https://www.heatherhannickdesigns.com/" }}
+/>
       </ServiceCard>
     </ServicePageContainer>
   );

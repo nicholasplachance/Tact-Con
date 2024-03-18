@@ -52,13 +52,13 @@ const PhotographerCredit = styled.div`
   }
 `;
 
-const ImageCard = ({ src, alt, isExpanded }) => (
+const ImageCard = ({ src, alt, designer }) => (
   <ImageContainer>
-    <Image src={src} alt={alt} isExpanded={isExpanded} />
+    <Image src={src} alt={alt} />
     <PhotographerCredit className="photographer-credit-overlay">
       Designer:{' '}
-      <a href="https://www.heatherhannickdesigns.com/" target="_blank" rel="noopener noreferrer">
-        Heather Hannick
+      <a href={designer.website} target="_blank" rel="noopener noreferrer">
+        {designer.name}
       </a>
     </PhotographerCredit>
   </ImageContainer>

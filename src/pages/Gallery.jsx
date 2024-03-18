@@ -19,6 +19,7 @@ const GalleryItem = styled.div`
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
 `;
@@ -41,21 +42,17 @@ const ImageOverlay = styled.div`
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 8px;
-  opacity: 1; /* Always visible */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+  ${GalleryItem}:hover & {
+    opacity: 1;
+  }
 `;
 
 const ImageText = styled.p`
   margin: 0;
   font-size: 16px;
-`;
-
-const DesignerCredit = styled(ImageOverlay)`
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s ease-in-out;
-
-  ${GalleryItem}:hover & {
-    opacity: 1; /* Visible on hover */
-  }
 `;
 
 const imagePaths = [
@@ -98,16 +95,18 @@ const GalleryComponent = ({ images = imagePaths }) => {
           />
           {(index === 6 || index === 7) && (
             <ImageOverlay>
-              <ImageText>Hoard House</ImageText>
+              <ImageText>Designer: House of Hoard</ImageText>
             </ImageOverlay>
           )}
-          <DesignerCredit>
-            <ImageText>{photographerCreditText}
-              <a href={photographerWebsite} target="_blank" rel="noopener noreferrer">
-                Heather Hannick
-              </a>
-            </ImageText>
-          </DesignerCredit>
+          {(index !== 6 && index !== 7) && (
+            <ImageOverlay>
+              <ImageText>{photographerCreditText}
+                <a href={photographerWebsite} target="_blank" rel="noopener noreferrer">
+                  Heather Hannick
+                </a>
+              </ImageText>
+            </ImageOverlay>
+          )}
         </GalleryItem>
       ))}
     </GalleryContainer>

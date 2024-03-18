@@ -55,7 +55,7 @@ const PhotographerCredit = styled.div`
   }
 `;
 
-const photographerCreditText = 'Interior Designer: ';
+const photographerCreditText = 'Designer: ';
 const photographerWebsite = 'https://www.heatherhannickdesigns.com/'; // Replace with actual photographer website
 
 const KitchenAndBathPage = () => {
@@ -70,9 +70,12 @@ const KitchenAndBathPage = () => {
       <ServiceCard>
         <ServiceTitle>Kitchen and Bathroom</ServiceTitle>
         <ServiceDescription>
-          Tact Construction is committed to your vision. Our team of designers works with you to design spaces that blend stunning aesthetics to fit your style, with functionality that suits your needs. Our skilled craftsmen take pride in precision and attention to detail all while maintaining a clean and safe workspace. We are prepared to turn your vision of a serene bathroom or elegant kitchen into life.
+          Tact Construction is committed to your vision. Our team of designers work with you to design spaces that blend stunning aesthetics to fit your style, with functionality that suits your needs. Our skilled craftsmen take pride in precision and attention to detail all while maintaining a clean and safe workspace. We are prepared to turn your vision of a serene bathroom or elegant kitchen into reality.
         </ServiceDescription>
-        <ImageCard src="assets/Portfolio/Lafayette Master Bath 5.jpg" alt="Custom Builds Example" isExpanded={isExpanded} />
+        <ImageCard
+  src="assets/Portfolio/Lafayette Master Bath 5.jpg" alt="Custom Builds Example"
+  designer={{ name: "Heather Hannick", website: "https://www.heatherhannickdesigns.com/" }}
+/>
       </ServiceCard>
     </ServicePageContainer>
   );
